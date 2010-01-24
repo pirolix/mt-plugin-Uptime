@@ -1,0 +1,5 @@
+<mtapp:widget class="widget" label="<__trans phrase="Load Averages">" can_close="1">
+1m=<span<mt:if name="la_1" gt="1.00"> style="color:red; font-weight:bold;"</mt:if>><$mt:var name="la_1"$></span>,
+5m=<span<mt:if name="la_5" gt="1.00"> style="color:red; font-weight:bold;"</mt:if>><$mt:var name="la_5"$></span>,
+15m=<span<mt:if name="la_15" gt="1.00"> style="color:red; font-weight:bold;"</mt:if>><$mt:var name="la_15"$></span>
+</mtapp:widget>
