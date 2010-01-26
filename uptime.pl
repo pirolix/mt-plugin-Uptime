@@ -50,7 +50,7 @@ sub hdlr_parameter {
 
     my $out = lc `uptime`;
     ($param->{la_1}, $param->{la_5}, $param->{la_15}) =
-        $out =~ /load\s+averages\:\s*([\d+.]+)\s*,\s*([\d+.]+)\s*,\s*([\d+.]+)/;
+        $out =~ /([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)/;
 }
 
 1;
