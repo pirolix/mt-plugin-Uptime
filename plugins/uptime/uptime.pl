@@ -1,5 +1,4 @@
 package MT::Plugin::Admin::OMV::Admin::uptime;
-# $Id$
 
 use strict;
 
@@ -75,7 +74,8 @@ sub _source_header_v5 {
 MTMLHEREDOC
 
     my $new = <<'MTMLHEREDOC';
-<li style="padding-right:0.5em;">LA:
+<li style="padding-right:0.5em;">
+<img src="<mt:var static_uri>plugins/uptime/chart_bar.png" alt="Load Average" />
 <span<mt:if name="la_1" gt="1.00"> style="color:red; font-weight:bold;"</mt:if> title="1<__trans phrase="minutes">"><$mt:var name="la_1"$></span>,
 <span<mt:if name="la_5" gt="1.00"> style="color:red; font-weight:bold;"</mt:if> title="5<__trans phrase="minutes">"><$mt:var name="la_5"$></span>,
 <span<mt:if name="la_15" gt="1.00"> style="color:red; font-weight:bold;"</mt:if> title="15<__trans phrase="minutes">"><$mt:var name="la_15"$></span></li>
