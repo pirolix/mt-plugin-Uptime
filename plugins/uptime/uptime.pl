@@ -1,4 +1,4 @@
-package MT::Plugin::Admin::OMV::Admin::uptime;
+package MT::Plugin::Admin::OMV::uptime;
 
 use strict;
 
@@ -34,7 +34,7 @@ sub init_registry {
                 widgets => {
                     $MYNAME => {
                         label    => 'Load Averages',
-                        template => 'tmpl/uptime.tmpl',
+                        template => "tmpl/$MYNAME/uptime.tmpl",
                         handler  => \&hdlr_parameter,
                         set      => 'sidebar',
                         singular => 1,
