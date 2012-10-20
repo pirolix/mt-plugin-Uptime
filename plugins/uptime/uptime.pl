@@ -1,11 +1,12 @@
 package MT::Plugin::Admin::OMV::uptime;
+# $Id$
 
 use strict;
 
 use vars qw( $VENDOR $MYNAME $VERSION );
 ($VENDOR, $MYNAME) = (split /::/, __PACKAGE__)[-2, -1];
 (my $revision = '$Rev$') =~ s/\D//g;
-$VERSION = "0.02_$revision";
+$VERSION = '0.02'. ($revision ? ".$revision" : '');
 
 use base qw( MT::Plugin );
 my $plugin = __PACKAGE__->new ({
